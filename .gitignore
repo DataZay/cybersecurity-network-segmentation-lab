@@ -1,0 +1,25 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# VM images (do NOT upload these)
+*.vdi
+*.vmdk
+*.vhd
+*.iso
+*.ova
+*.ovf
+
+# Logs
+*.log
+
+# IDE folders
+.vscode/
+.idea/
+
+# Local environment
+.env
