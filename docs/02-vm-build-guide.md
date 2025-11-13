@@ -227,7 +227,9 @@ Authorize and activate scope.
 
 If using this, disable pfSense DHCP on LAN to avoid conflicts.
 
-# 3. Windows Client — 10.10.0.20
+---
+
+## 3. Windows Client — 10.10.0.20
 ### 3.1 VM Specs
 
 OS: Windows 11 Enterprise
@@ -260,7 +262,9 @@ Use domain admin creds.
 
 Reboot and log in as CORP\Username.
 
-# 4. ELK SIEM VM — 10.10.0.30
+---
+
+## 4. ELK SIEM VM — 10.10.0.30
 ### 4.1 VM Specs
 
 OS: Ubuntu Server LTS
@@ -303,7 +307,9 @@ http://10.10.0.30:5601
 
 (You may need to edit kibana.yml to listen on 0.0.0.0.)
 
-# 5. IDS (Suricata) VM — 10.10.0.40 (Optional)
+---
+
+## 5. IDS (Suricata) VM — 10.10.0.40 (Optional)
 ### 5.1 VM Specs
 
 OS: Ubuntu Server
@@ -326,7 +332,9 @@ sudo apt install suricata -y
 Configure Suricata to monitor the appropriate interface and output to /var/log/suricata/eve.json.
 Later, Logstash will parse and ship these events to Elasticsearch.
 
-# 6. Scanner VM — Nessus/OpenVAS (10.10.0.60)
+---
+
+## 6. Scanner VM — Nessus/OpenVAS (10.10.0.60)
 ### 6.1 VM Specs
 
 OS: Ubuntu Server or dedicated Nessus appliance
@@ -341,7 +349,9 @@ Metasploitable: 10.20.0.50
 
 Other DMZ/LAN assets as required.
 
-# 7. Ubuntu Web / osTicket (DMZ) — 10.20.0.10
+---
+
+## 7. Ubuntu Web / osTicket (DMZ) — 10.20.0.10
 ### 7.1 VM Specs
 
 OS: Ubuntu Server
@@ -370,7 +380,9 @@ Set permissions as required by osTicket documentation.
 
 Access from LAN via http://10.20.0.10/.
 
-# 8. Metasploitable2 — 10.20.0.50
+---
+
+## 8. Metasploitable2 — 10.20.0.50
 
 Import Metasploitable2 VM.
 
@@ -386,7 +398,9 @@ DNS: 10.10.0.10 or 8.8.8.8
 
 No further hardening—this is intentionally vulnerable.
 
-# 9. Kali Attacker VM — 10.30.0.10
+---
+
+## 9. Kali Attacker VM — 10.30.0.10
 ### 9.1 VM Specs
 
 OS: Kali Linux
@@ -403,7 +417,9 @@ DNS: 8.8.8.8 or 10.10.0.10
 sudo apt update
 sudo apt install -y nmap hydra nikto enum4linux metasploit-framework
 
-# 10. Quick End-to-End Validation
+---
+
+## 10. Quick End-to-End Validation
 
 From Windows client: ping 10.10.0.1, 10.10.0.10, 10.10.0.30.
 
